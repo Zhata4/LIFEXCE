@@ -1,6 +1,4 @@
 const String splashText = """
- Watch your favorite movies or series on
- only one platform. you can watch it
- anytime and anywhere.
-
+Your future self will thank you 
+for the healthy choices you make today.
  """;

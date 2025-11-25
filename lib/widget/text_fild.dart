@@ -13,8 +13,8 @@ Widget textFild({
 }) {
   return Container(
     height: 70.0,
-    padding: EdgeInsets.symmetric(horizontal: 30.0),
-    margin: EdgeInsets.symmetric(
+    padding: const EdgeInsets.symmetric(horizontal: 30.0),
+    margin: const EdgeInsets.symmetric(
       horizontal: 20.0,
       vertical: 10.0,
     ),
@@ -25,7 +25,7 @@ Widget textFild({
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
+        SizedBox(
           width: 270.0,
           child: TextField(
             textAlignVertical: TextAlignVertical.center,

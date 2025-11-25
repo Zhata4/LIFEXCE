@@ -6,14 +6,14 @@ import 'package:uidisign05/data/demo.dart';
 import 'package:uidisign05/page/login_page.dart';
 import 'package:uidisign05/widget/main_button.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _SplashPageState createState() => _SplashPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               height: height / 3,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: gradient,
                   begin: Alignment.bottomCenter,
@@ -46,9 +46,9 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   RichText(
-                    text: TextSpan(children: [
+                    text: const TextSpan(children: [
                       TextSpan(
-                        text: 'abda',
+                        text: 'LIFEXCE',
                         style: headline,
                       ),
                       TextSpan(
@@ -57,20 +57,25 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ]),
                   ),
-                  SpaceVH(height: 20.0),
-                  Text(
+                  const SpaceVH(height: 20.0),
+                  const Text(
                     splashText,
                     textAlign: TextAlign.center,
                     style: headline2,
                   ),
                   Mainbutton(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (builder) => LoginPage()));
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
                     },
                     btnColor: blueButton,
                     text: 'Get Started',
                   ),
+                  const SpaceVH(height: 20.0),
                 ],
               ),
             ),

@@ -9,13 +9,13 @@ class Mainbutton extends StatelessWidget {
   final Color? txtColor;
   final Color btnColor;
   const Mainbutton({
-    Key? key,
+    super.key,
     required this.onTap,
     required this.text,
     this.image,
     this.txtColor,
     required this.btnColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class Mainbutton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 70.0,
-        margin: EdgeInsets.symmetric(horizontal: 20.0),
+        margin: const EdgeInsets.symmetric(horizontal: 20.0),
         decoration: BoxDecoration(
           color: btnColor,
           borderRadius: BorderRadius.circular(20.0),
